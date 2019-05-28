@@ -1,0 +1,19 @@
+<h1>候選人列表</h1>
+<%= link_to '新增候選人', new_candidate_path%>
+<div class="index_wrap">
+    <% @candidates.each do|candidate|%>
+        <div class="candidate_card">
+            <div class="candidate_pic">
+                <img src="https://picsum.photos/200/200/?random=1">
+            </div>
+            <article class="candidate_info">
+                <section>姓名：<%= candidate.name%>(<%=candidate.age%>)</section>
+                <section>政黨：<%= candidate.party%></section>
+                <%= link_to '看政見', candidate_path(candidate), class:"more_detail"%>
+                <%= link_to '修改', edit_candidate_path(candidate) %>
+                <%= link_to '投票', vote_candidate_path(candidate),method:'patch', data: {confirm: '確認投票？'} %>
+                <%= link_to '刪除', candidate_path(candidate), method:'delete', data: { confirm: '確認刪除？'} %>
+            </article>
+        </div>
+    <% end %>
+</div>

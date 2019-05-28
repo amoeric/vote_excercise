@@ -1,0 +1,23 @@
+<h1>修改候選人資料</h1>
+
+<%= form_for(@candidate) do |form|%>
+    <div>
+        <%= form.label :name, '姓名'%>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <%= form.label :age, '年齡' %>
+        <%= form.text_field :age %>
+    </div>
+    <div>
+        <%= form.label :party, '黨派' %>
+        <%= form.text_field :party %>
+    </div>
+    <div>
+        <%= form.label :platform, '政見' %>
+        <%= form.text_area :platform %>
+    </div>
+    <%= form.submit %>
+
+
+<% end%>

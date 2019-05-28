@@ -1,0 +1,51 @@
+form{
+    div{
+        margin: 5px 0;
+    }
+    input, textarea{
+        height: 50px;
+        vertical-align: middle;
+    }
+    input[type="submit"]{
+        display: block;
+        padding: 20px;
+        background-color: red;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.index_wrap{
+    max-width: 1200px;  
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    .candidate_card{
+        width: 33%;
+        margin: 10px auto;
+        border: 1px solid #95a5a6;
+        border-radius: 14px;
+        overflow: hidden;
+        
+        img{ width: 100%; }
+        .candidate_info{
+            padding: 0 10px;
+            section{ margin: 30px 0; }
+            a{
+                display: inline-block;
+                margin: auto;
+                padding: 20px;
+                border-radius: 14px;
+                text-decoration: none;
+                background-color: #f1c40f;
+            }
+            a:last-child{
+                background-color: red;
+                float: right;
+            }
+        }
+    }
+}
+
