@@ -1,5 +1,6 @@
 <h1>候選人列表</h1>
-<%= link_to '新增候選人', new_candidate_path%>
+<h3><%= link_to '新增候選人', new_candidate_path%></h3>
+<%= paginate @candidates %>
 <div class="index_wrap">
     <% @candidates.each do|candidate|%>
         <div class="candidate_card">
