@@ -8,6 +8,7 @@
             </div>
             <article class="candidate_info">
                 <section>姓名：<%= candidate.name%>(<%=candidate.age%>)</section>
+                <section>票數：<%= candidate.votes%></section>
                 <section>政黨：<%= candidate.party%></section>
                 <%= link_to '看政見', candidate_path(candidate), class:"more_detail"%>
                 <%= link_to '修改', edit_candidate_path(candidate) %>

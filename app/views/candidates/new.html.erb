@@ -1,4 +1,7 @@
 <h1>新增候選人</h1>
+<% @candidate.errors.full_messages.each do |message|%>
+    <p><%= message %></p>
+<% end %>
 <%= form_for(@candidate) do |form|%>
     <div>
         <%= form.label :name, '姓名'%>
